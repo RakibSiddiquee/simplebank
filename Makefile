@@ -19,4 +19,7 @@ sqlc:
 test:
 	go test -v -cover ./... # -v=verbose, ./... = to run all package test
 
-.PHONY: postgres createdb dropdb migrateup migratedown sqlc test
+server:
+	go run main.go
+
+.PHONY: postgres createdb dropdb migrateup migratedown sqlc test server
