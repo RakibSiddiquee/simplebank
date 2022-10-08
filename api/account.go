@@ -10,7 +10,7 @@ import (
 // createAccountRequest is used to create account request & validation
 type createAccountRequest struct {
 	Owner    string `json:"owner" binding:"required"`
-	Currency string `json:"currency" binding:"required,oneof=USD EUR"`
+	Currency string `json:"currency" binding:"required,currency"`
 }
 
 // createAccount is used to handle to create a new account
